@@ -1,0 +1,134 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Soy Intel — Pro</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-gradient-to-b from-[#070b14] to-[#0b1120] text-white">
+<header class="sticky top-0 z-20 bg-black/30 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+    <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_16px_6px_rgba(16,185,129,.45)]"></div>
+    <h1 class="text-xl font-bold">Soybean <span class="text-emerald-400">Intel</span></h1>
+    <a id="api-docs" class="ml-auto text-xs text-gray-400 hover:text-white underline underline-offset-4" href="#">API</a>
+  </div>
+</header>
+<main class="max-w-7xl mx-auto p-4 sm:p-6">
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="card"><p class="muted">Current ZL Price</p><p id="kpi-price" class="kpi">—</p><p id="kpi-change" class="text-xs muted">Loading…</p></div>
+    <div class="card"><p class="muted">Top Opportunity</p><p id="kpi-top" class="kpi">—</p><p id="kpi-top-event" class="text-xs muted">Loading…</p></div>
+    <div class="card"><p class="muted">Active Signals</p><p id="kpi-sig" class="kpi">—</p><p class="text-xs muted">Market alerts</p></div>
+  </section>
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+    <div class="card lg:col-span-2">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="title">Price Forecast</h3>
+        <div class="flex gap-2">
+          <button class="btn" data-model="lr">Linear</button>
+          <button class="btn" data-model="mc">Monte Carlo</button>
+          <button id="btn-scenario" class="btn-primary">Scenario</button>
+        </div>
+      </div>
+      <canvas id="chart" height="120"></canvas>
+    </div>
+    <div class="card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="title">Vegas Opportunities</h3>
+        <button id="btn-refresh" class="btn">Refresh</button>
+      </div>
+      <div id="opps" class="space-y-3 max-h-[520px] overflow-y-auto thin-scroll"></div>
+    </div>
+  </section>
+</main>
+<div id="modal" class="hidden fixed inset-0 z-30 items-center justify-center bg-black/60">
+  <div class="card w-[420px]">
+    <h3 class="title">Scenario</h3>
+    <div class="grid grid-cols-3 gap-3">
+      <div><label class="muted text-xs">Basis%</label><input id="sc-basis" class="input" type="number" step="0.1" value="0"></div>
+      <div><label class="muted text-xs">Vol</label><input id="sc-vol" class="input" type="number" step="0.1" value="1.0"></div>
+      <div><label class="muted text-xs">Demand</label><input id="sc-dem" class="input" type="number" step="5" value="0"></div>
+    </div>
+    <div class="flex gap-2 mt-3"><button id="sc-run" class="btn-primary flex-1">Run</button><button id="sc-x" class="btn flex-1">Cancel</button></div>
+    <div id="sc-out" class="text-sm text-gray-300 mt-2 hidden"></div>
+  </div>
+</div>
+<script>
+const API = window.API_BASE || 'http://localhost:8080/api';
+document.getElementById('api-docs').href = API.replace('/api','/docs');
+let chart;
+
+async function kpis(){
+  try{
+    const r = await fetch(`${API}/market-data?limit=2`); const a = await r.json();
+    if(a && a.length){
+      const cur=a[0], prev=a[1]||cur;
+      document.getElementById('kpi-price').textContent = `$${Number(cur.price).toFixed(3)}`;
+      const ch = Number(cur.price)-Number(prev.price);
+      const el=document.getElementById('kpi-change'); el.textContent = `${ch>=0?'+':''}${ch.toFixed(3)} vs prev`;
+      el.className = 'text-xs ' + (ch>=0?'text-emerald-300':'text-rose-300');
+    }
+    const opps = await fetch(`${API}/opportunities`).then(x=>x.json()).catch(()=>[]);
+    if(Array.isArray(opps) && opps.length){
+      document.getElementById('kpi-top').textContent = Math.round(opps[0].score||0);
+      document.getElementById('kpi-top-event').textContent = opps[0].event_name||'';
+    }
+    const sig = await fetch(`${API}/signals`).then(x=>x.json()).catch(()=>({signals:[]}));
+    document.getElementById('kpi-sig').textContent = (sig.signals||[]).length;
+  }catch(e){}
+}
+
+async function forecast(model='lr'){
+  const r = await fetch(`${API}/forecast`, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({model, days: 30})});
+  const d = await r.json();
+  const ctx = document.getElementById('chart').getContext('2d');
+  if(chart) chart.destroy();
+  const grad = ctx.createLinearGradient(0,0,0,200);
+  grad.addColorStop(0,'rgba(59,130,246,0.35)'); grad.addColorStop(1,'rgba(59,130,246,0.05)');
+  chart = new Chart(ctx, { type:'line',
+    data:{ labels: d.dates.map(x=>new Date(x).toLocaleDateString()), datasets:[
+      {label:'P90', data:d.p90, borderColor:'rgb(34,197,94)', tension:.25, borderWidth:1, pointRadius:0},
+      {label:'P50', data:d.p50, borderColor:'rgb(59,130,246)', backgroundColor:grad, tension:.25, borderWidth:2, pointRadius:0},
+      {label:'P10', data:d.p10, borderColor:'rgb(239,68,68)', tension:.25, borderWidth:1, pointRadius:0},
+    ]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{legend:{labels:{color:'#e5e7eb'}}},
+      scales:{x:{ticks:{color:'#e5e7eb'}, grid:{color:'rgba(255,255,255,.06)'}}, y:{ticks:{color:'#e5e7eb'}, grid:{color:'rgba(255,255,255,.06)'}}} }
+  });
+}
+
+async function opps(){
+  const box = document.getElementById('opps');
+  box.innerHTML = '<div class="skeleton h-24"></div><div class="skeleton h-24"></div>';
+  try{
+    const r = await fetch(`${API}/opportunities`); const arr = await r.json();
+    if(!Array.isArray(arr)||arr.length===0){ box.innerHTML='<p class="muted text-sm">No current opportunities.</p>'; return; }
+    box.innerHTML = arr.map(o => `
+      <div class="flex justify-between items-start bg-white/5 border border-white/10 rounded-xl p-3 hover:bg-white/7 transition">
+        <div><div class="font-semibold">${o.event_name||''}</div><div class="text-xs text-gray-400">${o.event_date||''}</div><div class="text-xs text-gray-500">${o.restaurant_name||''}</div></div>
+        <div class="text-right"><div class="badge">${Number(o.score||0).toFixed(0)}</div><div class="text-xs text-gray-300 mt-1">+${Number(o.predicted_lbs||0).toFixed(0)} lbs · $${Number(o.revenue||0).toFixed(0)}</div></div>
+      </div>`).join('');
+  }catch(e){ box.innerHTML='<p class="text-rose-300 text-sm">Failed to load opportunities.</p>'; }
+}
+
+function openModal(){ document.getElementById('modal').classList.remove('hidden'); }
+function closeModal(){ document.getElementById('modal').classList.add('hidden'); }
+async function runScenario(){
+  const basis=parseFloat(document.getElementById('sc-basis').value)||0;
+  const vol=parseFloat(document.getElementById('sc-vol').value)||1;
+  const dem=parseFloat(document.getElementById('sc-dem').value)||0;
+  const r = await fetch(`${API}/scenario`, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({basis_change:basis, volatility_scale:vol, demand_shock:dem})});
+  const d = await r.json(); const out = document.getElementById('sc-out'); out.classList.remove('hidden');
+  out.textContent = `${d.impact_pct>=0?'+':''}${Number(d.impact_pct||0).toFixed(2)}% — New P50 $${Number(d.adjusted_price||0).toFixed(2)}`;
+  out.style.color = d.impact_pct>=0 ? '#86efac' : '#fca5a5';
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  kpis(); forecast('lr'); opps();
+  document.querySelectorAll('.btn[data-model]').forEach(b=>b.addEventListener('click',()=>forecast(b.dataset.model)));
+  document.getElementById('btn-refresh').addEventListener('click', opps);
+  document.getElementById('btn-scenario').addEventListener('click', openModal);
+  document.getElementById('sc-x').addEventListener('click', closeModal);
+  document.getElementById('sc-run').addEventListener('click', runScenario);
+  setInterval(kpis, 30000);
+});
+</script>
+</body></html>
