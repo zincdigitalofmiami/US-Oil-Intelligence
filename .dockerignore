@@ -1,0 +1,17 @@
+# Same exclusions as .gitignore where it matters for build context
+venv/
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+.firebase/
+hosting.*.cache
+.DS_Store
+*.log
+
+# Exclude heavy data except required inputs
+data/*
+!data/zl_1d.csv
+!data/zl_1m.csv
+!data/restaurants.csv
+!data/events.jsonl
