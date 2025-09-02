@@ -16,6 +16,7 @@ class Forecaster:
     def __init__(self):
         self.model=None; self.hist=None
     def _prep(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Prepares the input DataFrame by adding features for the model."""
         df = df.copy(); df['date']=pd.to_datetime(df['date']); df=df.sort_values('date')
         df['ret']=df['price'].pct_change().fillna(0.0)
         df['vol']=df['ret'].rolling(5, min_periods=1).std().fillna(0.01)
