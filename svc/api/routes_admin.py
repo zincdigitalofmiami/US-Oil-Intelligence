@@ -1,77 +1,56 @@
-
-from fastapi import APIRouter, HTTPException, Depends, status
-from pydantic import BaseModel
-from typing import Literal, Optional
-
-# This is a placeholder for a dependency that would get the authenticated user.
-# from ..core.security import get_current_user 
-
-# This would be our actual secret management service
-# from ..core.secrets import update_secret
-
-# Placeholder for user model
-class User:
-    def __init__(self, username: str, role: str):
-        self.username = username
-        self.role = role
-
-# Dummy user for now. In a real app, this would come from the auth token.
-def get_current_admin_user():
-    user = User(username="admin_user", role="admin")
-    if user.role != "admin":
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="User does not have admin privileges"
-        )
-    return user
-
-# --- Pydantic Models ---
-class SecretPayload(BaseModel):
-    service: Literal["OpenRouter", "ProFarmer", "WeatherAPI"]
-    api_key: Optional[str] = None
-    username: Optional[str] = None
-    password: Optional[str] = None
-
-class SecretResponse(BaseModel):
-    project_id: str
-    secret_id: str
-    version: str
-    message: str
+from fastapi import APIRouter, BackgroundTasks
+from fastapi.responses import JSONResponse, HTMLResponse
+from loguru import logger
+from svc.services.forecasting import Forecaster
+from svc.core.config import settings
+import os
 
 router = APIRouter()
 
-@router.post("/admin/secrets", response_model=SecretResponse, status_code=status.HTTP_201_CREATED)
-def set_external_api_secret(
-    payload: SecretPayload,
-    current_user: User = Depends(get_current_admin_user)
-):
+def train_model_task():
     """
-    Securely updates a secret in Google Secret Manager.
-    This endpoint is for admin use only.
+    A synchronous function to be run in the background.
     """
-    print(f"Admin user '{current_user.username}' is updating a secret for the '{payload.service}' service.")
-    
-    secret_id = f"service-{payload.service.lower()}-credentials"
-    secret_value = ""
+    try:
+        logger.info("Starting model training...")
+        forecaster = Forecaster() # Create a new, empty forecaster
+        forecaster.fit()
+        logger.info("Model training completed.")
 
-    if payload.api_key:
-        secret_value = payload.api_key
-    elif payload.username and payload.password:
-        # Store as a JSON string to keep both parts
-        secret_value = f'{{"username": "{payload.username}", "password": "{payload.password}"}}'
-    else:
-        raise HTTPException(status_code=400, detail="Either api_key or both username and password must be provided.")
+        # Ensure the directory exists
+        model_dir = os.path.dirname(settings.model_path)
+        if not os.path.exists(model_dir):
+            os.makedirs(model_dir)
 
-    # In a real implementation, this is where you call the Secret Manager service
-    # project_id = "us-oil-solutions-app"
-    # version = update_secret(project_id, secret_id, secret_value)
-    
-    # Simulating a successful response from Secret Manager
-    print(f"Simulating update for secret '{secret_id}' in project 'us-oil-solutions-app'.")
-    
-    return {
-        "project_id": "us-oil-solutions-app",
-        "secret_id": secret_id,
-        "version": "new_version_1", # Placeholder
-        "message": f"Secret for {payload.service} updated successfully."
-    }
+        logger.info(f"Saving model to {settings.model_path}...")
+        forecaster.save_model(settings.model_path)
+        logger.success(f"Model successfully saved to {settings.model_path}.")
+
+    except FileNotFoundError:
+        logger.error(f"Error: The directory for the model path does not exist and could not be created.")
+    except IOError as e:
+        logger.error(f"An I/O error occurred while saving the model: {e}")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred during model training: {e}")
+
+
+@router.post("/retrain-model", tags=["Admin"])
+async def retrain_model(background_tasks: BackgroundTasks):
+    """
+    Endpoint to trigger model retraining.
+    """
+    logger.info("Received request to retrain model. Starting background task.")
+    background_tasks.add_task(train_model_task)
+    return JSONResponse(status_code=202, content={"message": "Model training started in the background."})
+
+@router.get("/training", tags=["Admin"])
+async def training_page():
+    """
+    Serves the admin training page.
+    """
+    try:
+        with open("frontend/admin_training.html") as f:
+            return HTMLResponse(content=f.read(), status_code=200)
+    except FileNotFoundError:
+        logger.error("frontend/admin_training.html not found.")
+        return HTMLResponse(content="<h1>Admin page not found</h1>", status_code=404)

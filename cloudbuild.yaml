@@ -45,15 +45,28 @@ steps:
   secretEnv: ['FIREBASE_TOKEN']
   id: 'Deploy Frontend'
 
+# Best Practice: Add a dedicated step for data ingestion.
+# This step will run our new ingestion script, securely accessing the USDA API key.
+- name: 'python'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - 'pip install -r ingestion/requirements.txt && python ingestion/usda_data_ingestor.py'
+  secretEnv: ['USDA_API_KEY']
+  id: 'Ingest Data'
+  # This step can be run in parallel with the build.
+
 # List of images to be built and pushed.
 images:
 - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_SERVICE_NAME}:$COMMIT_SHA'
 
-# Use Secret Manager for the Firebase token.
+# Use Secret Manager for the Firebase token and USDA API Key.
 availableSecrets:
   secretManager:
   - versionName: projects/$PROJECT_ID/secrets/firebase-ci-token/versions/latest
     env: 'FIREBASE_TOKEN'
+  - versionName: projects/$PROJECT_ID/secrets/usda-api-key/versions/latest
+    env: 'USDA_API_KEY'
 
 # Explicitly set the logging option to resolve the service account permissions error.
 options:

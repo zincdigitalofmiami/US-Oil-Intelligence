@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default Deny: Disallow all reads/writes by default for safety
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Users Collection: Allow users to read their own data
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      // Allow admins to read any user document
+      allow read: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(['admin']);
+    }
+
+    // API Keys Collection: Only allow backend functions (or admins for read) to access
+    match /api_keys/{keyId} {
+      // Admins can read the list of keys (but not the encrypted value directly in a secure setup)
+      allow read: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(['admin']);
+      // NO direct writes or deletes from the client. This must be done via a Cloud Function.
+      allow write: if false;
+    }
+
+    // API Key Audit Log: Only allow backend functions to write
+    match /api_key_audit_log/{logId} {
+      // Admins can read the audit trail
+      allow read: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(['admin']);
+      // NO direct writes from the client.
+      allow write: if false;
+    }
+  }
+}

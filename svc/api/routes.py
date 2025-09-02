@@ -1,47 +1,56 @@
-from fastapi import APIRouter
-from .schemas import ForecastReq, ScenarioReq, ForecastResp
-from ..services.forecasting import Forecaster
-from ..services.data_loader import load_market_daily
-from ..services.vegas_intel import generate_opportunities
+
+from fastapi import APIRouter, Depends, HTTPException
+from .schemas import ForecastReq, ForecastResp, ScenarioReq # Import the new schemas
+from svc.services.forecasting import Forecaster
+from typing import Dict
+from fastapi.responses import JSONResponse
+
+
+# Assuming a single, shared Forecaster instance is managed in the application's state
+# This is a common practice for resource-intensive objects.
+from fastapi import Request
+
+def get_forecaster(request: Request) -> Forecaster:
+    return request.app.state.forecaster
 
 router = APIRouter()
-_f = Forecaster()
-
-@router.get("/kpis")
-def get_kpis():
-    """Returns key performance indicators."""
-    return {
-        "price": 1420.25,
-        "change": -0.5,
-        "top_opportunity": "Las Vegas Strip",
-        "top_event": "Major Convention",
-        "active_signals": 3
-    }
-
-@router.get("/market-data")
-def market_data(limit:int=100):
-    df = load_market_daily().sort_values('date', ascending=False).head(limit)
-    return df.to_dict(orient='records')
 
 @router.post("/forecast", response_model=ForecastResp)
-def forecast(req: ForecastReq):
-    _f.fit()
-    res = _f.forecast_mc(days=req.days) if req.model=="mc" else _f.forecast_lr(days=req.days)
+def get_forecast(req: ForecastReq, forecaster: Forecaster = Depends(get_forecaster)):
+    """The main endpoint to get a forecast."""
+    # We'll use the MC forecaster for now
+    res = forecaster.forecast_mc(days=req.days)
+    
+    # Convert timestamps to ISO 8601 strings
+    dates_iso = [d.isoformat() for d in res.dates]
+    
     return ForecastResp(
-        dates=[d.date().isoformat() for d in res.dates],
-        p10=res.p10, p50=res.p50, p90=res.p90, current_price=res.current_price
+        dates=dates_iso,
+        p10=res.p10,
+        p50=res.p50,
+        p90=res.p90,
+        current_price=res.current_price
     )
 
 @router.post("/scenario")
-def scenario(req: ScenarioReq):
-    _f.fit(); res = _f.forecast_lr(days=30)
-    adj = _f.apply_scenario(res, req.basis_change, req.volatility_scale, req.demand_shock)
-    impact = ((adj['p50'][0] - res.p50[0]) / res.p50[0] * 100.0) if res.p50 else 0.0
-    return {"impact_pct": impact, "adjusted_price": adj['p50'][0], "adjusted_forecast": adj}
+def apply_scenario(req: ScenarioReq, forecaster: Forecaster = Depends(get_forecaster)) -> Dict[str, list]:
+    """
+    Applies a scenario to the latest forecast.
+    This is a simplified example. A real implementation would be more robust.
+    """
+    # Get the latest forecast (or a default one)
+    res = forecaster.forecast_mc(days=30) 
+    
+    # Apply the scenario
+    adjusted_forecast = forecaster.apply_scenario(
+        res, 
+        basis=req.basis_change, 
+        vol_scale=req.volatility_scale, 
+        demand=req.demand_shock
+    )
+    return adjusted_forecast
 
-@router.get("/opportunities")
-def opportunities():
-    return generate_opportunities(limit=50)
-
+# A simple health check endpoint
 @router.get("/health")
-def health(): return {"ok": True}
+def health_check():
+    return JSONResponse(content={"status": "ok"})

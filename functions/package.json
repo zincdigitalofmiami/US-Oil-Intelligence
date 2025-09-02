@@ -1,0 +1,15 @@
+{
+  "name": "soy-intel-functions",
+  "description": "Cloud Functions for the US Oil Solutions Application",
+  "version": "0.0.1",
+  "private": true,
+  "main": "src/index.js",
+  "engines": {
+    "node": "18"
+  },
+  "dependencies": {
+    "@google-cloud/kms": "^4.2.1",
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^5.0.0"
+  }
+}
