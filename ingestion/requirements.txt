@@ -1,0 +1,5 @@
+# Requirements for the data ingestion services.
+# These are kept separate from the main application's requirements.
+
+requests
+google-cloud-bigquery

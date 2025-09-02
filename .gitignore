@@ -1,147 +1,30 @@
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
 # Python
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-.pytest_cache/
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.dmypy.json
-dmypy.json
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
 venv/
-ENV/
-env/
-ENV/
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+.pytest_cache/
+.cache/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Node / UI
+node_modules/
+dist/
+.out/
+.next/
 
-# Rope project settings
-.ropeproject
+# Firebase / tooling
+.firebase/
+firebase-debug.log
+.storage/
 
-# Mr Developer
-.mr.developer.cfg
-.project
-
-# Pyright
-.pyrightconfig.json
-pyrightconfig.json
-
-# pytype
-.pytype
-
-# Cython debug symbols
-cython_debug/
-
-# Application-specific
-model.pkl
-*.log
+# OS/IDE
 .DS_Store
-*.zip
-
-# IDEs
 .vscode/
 .idea/
 
-# Firebase
-.firebase/
-.firebaserc
-firebase.json
-hosting.*.cache
-
-# Ingestion folder
-ingestion/
+# Data dumps
+data/*.csv
+data/*.parquet
+data/*.zip

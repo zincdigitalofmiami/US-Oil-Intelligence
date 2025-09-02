@@ -1,3 +1,4 @@
+
 # This is a streamlined cloudbuild.yaml that leverages a multi-stage Dockerfile.
 # The Dockerfile now handles all dependency installation, linting, and testing.
 
@@ -15,12 +16,8 @@ steps:
   waitFor: ['Build']
 
 # 3. Deploy the container image to Cloud Run.
-- name: 'gcr.io/google-appengine/exec-wrapper'
+- name: 'gcr.io/google-cloud-builders/gcloud'
   args:
-  - '-i'
-  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_SERVICE_NAME}:$COMMIT_SHA'
-  - '--'
-  - 'gcloud'
   - 'run'
   - 'deploy'
   - '${_SERVICE_NAME}'
@@ -31,8 +28,8 @@ steps:
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
-  - '--service-account' # Added service account flag
-  - 'firebase-ci-cd-sa@soy-comm-2024.iam.gserviceaccount.com' # Your service account email
+  - '--service-account'
+  - 'firebase-ci-cd-sa@soy-comm-2024.iam.gserviceaccount.com'
   id: 'Deploy Backend'
   waitFor: ['Push']
 
