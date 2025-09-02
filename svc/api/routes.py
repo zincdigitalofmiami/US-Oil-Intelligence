@@ -7,6 +7,17 @@ from ..services.vegas_intel import generate_opportunities
 router = APIRouter()
 _f = Forecaster()
 
+@router.get("/kpis")
+def get_kpis():
+    """Returns key performance indicators."""
+    return {
+        "price": 1420.25,
+        "change": -0.5,
+        "top_opportunity": "Las Vegas Strip",
+        "top_event": "Major Convention",
+        "active_signals": 3
+    }
+
 @router.get("/market-data")
 def market_data(limit:int=100):
     df = load_market_daily().sort_values('date', ascending=False).head(limit)

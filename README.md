@@ -28,7 +28,7 @@ python -m http.server 3000                # http://localhost:3000
 
 ## Cloud Run deploy
 ```bash
-export PROJECT_ID=<your-project-id>
+export PROJECT_ID=us-oil-solutions-app
 export REGION=us-central1
 bash cloudrun/deploy.sh
 ```

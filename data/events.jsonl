@@ -1,0 +1,331 @@
+{"start": "2025-09-01T00:00:00Z", "phq_attendance": 0, "title": "Labor Day", "entities": []}
+{"start": "2025-10-13T00:00:00Z", "phq_attendance": 0, "title": "Columbus Day", "entities": []}
+{"start": "2025-09-01T00:00:00Z", "phq_attendance": 0, "title": "Labor Day", "entities": []}
+{"start": "2025-09-13T16:00:00Z", "phq_attendance": 20000, "title": "International Baking Industry Exposition", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-09-29T07:00:00Z", "phq_attendance": 10000, "title": "Pack Expo Las Vegas", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-10-14T16:00:00Z", "phq_attendance": 20000, "title": "NBAA Business Aviation Convention & Exhibition", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-05-24T00:00:00Z", "phq_attendance": 384960, "title": "Clark County School District - Summer Break", "entities": []}
+{"start": "2025-07-22T07:00:00Z", "phq_attendance": 20000, "title": "AWFS", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-07-27T07:00:00Z", "phq_attendance": 50000, "title": "Las Vegas Market Summer", "entities": []}
+{"start": "2025-09-18T23:00:00Z", "phq_attendance": 20000, "title": "iHeartRadio Music Festival", "entities": []}
+{"start": "2025-10-07T07:00:00Z", "phq_attendance": 17500, "title": "IMEX America", "entities": []}
+{"start": "2025-10-15T07:00:00Z", "phq_attendance": 10000, "title": "White Label World Expo", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-10-19T16:00:00Z", "phq_attendance": 5000, "title": "Biennial Western Coatings Symposium and Show", "entities": [{"name": "Paris Las Vegas"}]}
+{"start": "2025-10-13T02:00:00Z", "phq_attendance": 12199, "title": "Hans Zimmer at T-Mobile Arena", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-21T19:00:00Z", "phq_attendance": 10000, "title": "METALCON", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-09-15T16:30:00Z", "phq_attendance": 5000, "title": "International Fastener Expo", "entities": [{"name": "Mandalay Bay Beach"}]}
+{"start": "2025-08-18T07:00:00Z", "phq_attendance": 20000, "title": "MAGIC LV", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-08-25T16:00:00Z", "phq_attendance": 10000, "title": "VMworld", "entities": []}
+{"start": "2025-08-02T16:00:00Z", "phq_attendance": 20000, "title": "Black Hat USA", "entities": [{"name": "Mandalay Bay Convention Center"}]}
+{"start": "2025-08-17T15:30:00Z", "phq_attendance": 20000, "title": "BICSI Fall Conference & Exhibition", "entities": [{"name": "The Venetian Resort"}]}
+{"start": "2025-09-02T16:00:00Z", "phq_attendance": 10000, "title": "Commercial UAV Expo", "entities": [{"name": "CAESARS FORUM"}]}
+{"start": "2025-09-03T19:00:00Z", "phq_attendance": 10000, "title": "Experience Convention & Trade Show", "entities": [{"name": "CAESARS FORUM"}]}
+{"start": "2025-10-06T07:00:00Z", "phq_attendance": 25000, "title": "G2E 2025 - Global Gaming Expo", "entities": [{"name": "The Venetian Convention and Expo Center"}]}
+{"start": "2025-08-03T16:00:00Z", "phq_attendance": 30000, "title": "ASD Market Week Trade Show", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-09-08T07:00:00Z", "phq_attendance": 40000, "title": "RE+ (featuring SPI + ESI + Power + Infrastructure)", "entities": []}
+{"start": "2025-08-13T16:00:00Z", "phq_attendance": 20000, "title": "SuperZoo", "entities": [{"name": "Mandalay Bay Beach"}]}
+{"start": "2025-10-11T23:30:00Z", "phq_attendance": 80000, "title": "Focused Health 302 - NASCAR Xfinity Series - Playoff Race", "entities": [{"name": "Las Vegas Motor Speedway"}]}
+{"start": "2025-10-12T07:00:00Z", "phq_attendance": 80000, "title": "NASCAR Cup Series - South Point 400", "entities": [{"name": "Las Vegas Motor Speedway"}]}
+{"start": "2025-09-21T01:30:00Z", "phq_attendance": 20000, "title": "GloRilla, Jelly Roll, John Fogerty, and 3 others", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-15T03:00:00Z", "phq_attendance": 5328, "title": "Scorpions with Buckcherry (Rescheduled from 2/27/25)", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-17T03:00:00Z", "phq_attendance": 5347, "title": "Scorpions with Buckcherry (Rescheduled from 3/1/25)", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-20T03:00:00Z", "phq_attendance": 5372, "title": "Scorpions with Buckcherry (Rescheduled from 3/6/25)", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-22T03:00:00Z", "phq_attendance": 5301, "title": "Scorpions with Buckcherry (Rescheduled from 3/8/25)", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-24T03:00:00Z", "phq_attendance": 5359, "title": "Scorpions with Buckcherry (Rescheduled from 3/11/25)", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-09-17T07:00:00Z", "phq_attendance": 12077, "title": "Vision Expo West", "entities": []}
+{"start": "2025-08-02T03:00:00Z", "phq_attendance": 3441, "title": "Teddy Swims", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-13T18:00:00Z", "phq_attendance": 4966, "title": "Las Vegas Job Fair August 13, 2025 - Las Vegas Career Fairs", "entities": []}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 5300, "title": "Motley Crue (Rescheduled from 3/28/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-14T03:00:00Z", "phq_attendance": 5559, "title": "Motley Crue (Rescheduled from 3/29/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-18T03:00:00Z", "phq_attendance": 5301, "title": "Motley Crue (Rescheduled from 4/2/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-20T03:00:00Z", "phq_attendance": 5334, "title": "Motley Crue (Rescheduled from 4/4/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-21T03:00:00Z", "phq_attendance": 5330, "title": "Motley Crue (Rescheduled from 4/5/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-25T03:00:00Z", "phq_attendance": 5340, "title": "Motley Crue (Rescheduled from 4/9/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-27T03:00:00Z", "phq_attendance": 5376, "title": "Motley Crue (Rescheduled from 4/11/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-28T03:00:00Z", "phq_attendance": 5300, "title": "Motley Crue (Rescheduled from 4/12/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-10-02T03:00:00Z", "phq_attendance": 5275, "title": "Motley Crue (Rescheduled from 4/16/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-10-04T03:00:00Z", "phq_attendance": 5280, "title": "Motley Crue (Rescheduled from 4/18/25)", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-10-09T18:00:00Z", "phq_attendance": 4685, "title": "Las Vegas Job Fair October 9, 2025 - Las Vegas Career Fairs", "entities": []}
+{"start": "2025-08-13T02:05:00Z", "phq_attendance": 5545, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-29T02:05:00Z", "phq_attendance": 5545, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-02T02:05:00Z", "phq_attendance": 5461, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-01T02:05:00Z", "phq_attendance": 4884, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-17T02:05:00Z", "phq_attendance": 5170, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-07-31T02:05:00Z", "phq_attendance": 4884, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-18T01:35:00Z", "phq_attendance": 5498, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-31T02:05:00Z", "phq_attendance": 5170, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-18T01:05:00Z", "phq_attendance": 5214, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-14T02:05:00Z", "phq_attendance": 5545, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-17T01:35:00Z", "phq_attendance": 5498, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-28T02:05:00Z", "phq_attendance": 5545, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-30T02:05:00Z", "phq_attendance": 5214, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-15T02:05:00Z", "phq_attendance": 5545, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-01T01:05:00Z", "phq_attendance": 5639, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-16T02:05:00Z", "phq_attendance": 5214, "title": "Tacoma Rainiers vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-21T19:05:00Z", "phq_attendance": 4368, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-03T02:05:00Z", "phq_attendance": 5294, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-19T01:35:00Z", "phq_attendance": 5498, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-04T01:05:00Z", "phq_attendance": 5199, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-07-30T02:05:00Z", "phq_attendance": 4884, "title": "Reno Aces vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-08-27T02:05:00Z", "phq_attendance": 5545, "title": "Iowa Cubs vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-21T02:05:00Z", "phq_attendance": 5290, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-20T02:05:00Z", "phq_attendance": 5427, "title": "Salt Lake Bees vs Las Vegas Aviators", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-10-10T07:00:00Z", "phq_attendance": 50000, "title": "Summerlin Festival of Arts", "entities": []}
+{"start": "2025-10-01T16:00:00Z", "phq_attendance": 10000, "title": "Fence Show and Security Expo", "entities": [{"name": "South Point Hotel, Casino & Spa"}]}
+{"start": "2025-09-14T03:00:00Z", "phq_attendance": 9287, "title": "Alejandro Fernandez", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-09-16T03:00:00Z", "phq_attendance": 8905, "title": "Alejandro Fernandez", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-08-10T03:00:00Z", "phq_attendance": 9186, "title": "Ghost", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-10-18T18:00:00Z", "phq_attendance": 85000, "title": "Panic! At the Disco, blink-182, Avril Lavigne, and 38 others", "entities": [{"name": "Las Vegas Festival Grounds"}]}
+{"start": "2025-10-18T17:00:00Z", "phq_attendance": 60000, "title": "When We Were Young", "entities": []}
+{"start": "2025-09-13T17:00:00Z", "phq_attendance": 5000, "title": "The Oddities & Curiosities Expo", "entities": [{"name": "World Market Center Las Vegas"}]}
+{"start": "2025-10-16T17:00:00Z", "phq_attendance": 6591, "title": "Psycon Psychedelic Convention Las Vegas 2025", "entities": []}
+{"start": "2025-08-10T03:00:00Z", "phq_attendance": 8077, "title": "Maoli", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-06T03:00:00Z", "phq_attendance": 5760, "title": "Jeff Dunham: Artificial Intelligence", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-08-04T03:00:00Z", "phq_attendance": 5760, "title": "Jeff Dunham: Artificial Intelligence", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-10-13T07:00:00Z", "phq_attendance": 60000, "title": "Oracle OpenWorld and CloudWorld", "entities": [{"name": "The Venetian Convention and Expo Center"}]}
+{"start": "2025-07-27T02:00:00Z", "phq_attendance": 17963, "title": "Disney Descendants Zombies", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-09-26T16:00:00Z", "phq_attendance": 5128, "title": "BIOMED EXPO LAS VEGAS 2025", "entities": [{"name": "Alexis Park All Suite Resort"}]}
+{"start": "2025-08-07T16:00:00Z", "phq_attendance": 7000, "title": "DEFCON", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-08-19T16:00:00Z", "phq_attendance": 10000, "title": "All Wireless & Prepaid Expo", "entities": [{"name": "Caesars Palace"}]}
+{"start": "2025-09-02T16:00:00Z", "phq_attendance": 10000, "title": "Self Storage Association Conference & Trade Show", "entities": [{"name": "ARIA Resort & Casino"}]}
+{"start": "2025-09-17T00:00:00Z", "phq_attendance": 20000, "title": "Human Resource Technology Conference and Exposition", "entities": [{"name": "Mandalay Bay Convention Center"}]}
+{"start": "2025-09-03T16:00:00Z", "phq_attendance": 10000, "title": "Built Environment Xpo (BEX) Asia", "entities": [{"name": "The Venetian Convention and Expo Center"}]}
+{"start": "2025-09-18T16:00:00Z", "phq_attendance": 5000, "title": "Orthopaedic Summit: Evolving Techniques", "entities": [{"name": "Fontainebleau"}]}
+{"start": "2025-09-18T16:00:00Z", "phq_attendance": 5000, "title": "International Foot and Ankle Foundation Annual Las Vegas Seminar", "entities": [{"name": "Encore Hotel & Casino"}]}
+{"start": "2025-10-01T17:00:00Z", "phq_attendance": 20000, "title": "Las Vegas Small Business Expo 2025", "entities": []}
+{"start": "2025-10-15T16:00:00Z", "phq_attendance": 10000, "title": "MICE Show Asia", "entities": [{"name": "The Venetian Convention and Expo Center"}]}
+{"start": "2025-10-04T07:00:00Z", "phq_attendance": 100000, "title": "Art in the Park", "entities": []}
+{"start": "2025-10-14T07:00:00Z", "phq_attendance": 8000, "title": "Mobile World Congress Americas in partnership with CTIA (formerly CTIA Wireless)", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-08-03T02:00:00Z", "phq_attendance": 19522, "title": "Monster Jam", "entities": [{"name": "Thomas & Mack Center"}]}
+{"start": "2025-08-02T02:00:00Z", "phq_attendance": 19522, "title": "Monster Jam", "entities": [{"name": "Thomas & Mack Center"}]}
+{"start": "2025-09-17T07:00:00Z", "phq_attendance": 30000, "title": "San Gennaro Feast", "entities": []}
+{"start": "2025-08-02T19:00:00Z", "phq_attendance": 8458, "title": "Minnesota Lynx vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-03T22:00:00Z", "phq_attendance": 7478, "title": "Golden State Valkyries vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-09T02:00:00Z", "phq_attendance": 7990, "title": "Seattle Storm vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-11T01:00:00Z", "phq_attendance": 7576, "title": "Connecticut Sun vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-14T01:30:00Z", "phq_attendance": 7766, "title": "New York Liberty vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-17T19:30:00Z", "phq_attendance": 7412, "title": "Dallas Wings vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-20T02:00:00Z", "phq_attendance": 7872, "title": "Atlanta Dream vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-22T02:00:00Z", "phq_attendance": 8099, "title": "Phoenix Mercury vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-09-05T02:00:00Z", "phq_attendance": 6285, "title": "Minnesota Lynx vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-09-08T01:00:00Z", "phq_attendance": 6516, "title": "Chicago Sky vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-09-10T02:00:00Z", "phq_attendance": 6967, "title": "Chicago Sky vs Las Vegas Aces", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-07T07:00:00Z", "phq_attendance": 25000, "title": "DEF CON", "entities": []}
+{"start": "2025-10-03T07:00:00Z", "phq_attendance": 24000, "title": "Rise Festival", "entities": []}
+{"start": "2025-07-27T01:00:00Z", "phq_attendance": 4080, "title": "Tucson Sugar Skulls vs Vegas Knight Hawks", "entities": [{"name": "Lee Family Forum"}]}
+{"start": "2025-09-14T03:00:00Z", "phq_attendance": 4301, "title": "Ricky Martin", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-03T03:00:00Z", "phq_attendance": 3718, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-14T07:00:00Z", "phq_attendance": 21000, "title": "IBIE", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-08-07T03:00:00Z", "phq_attendance": 4544, "title": "Lenny Kravitz", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-02T03:00:00Z", "phq_attendance": 4530, "title": "Lenny Kravitz", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-03T03:00:00Z", "phq_attendance": 4544, "title": "Lenny Kravitz", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-09T03:00:00Z", "phq_attendance": 4567, "title": "Lenny Kravitz", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-10T03:00:00Z", "phq_attendance": 4632, "title": "Lenny Kravitz", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-30T05:00:00Z", "phq_attendance": 3792, "title": "ODESZA (DJ Set)", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-14T02:00:00Z", "phq_attendance": 4226, "title": "ODESZA and Phantoms", "entities": [{"name": "Encore Beach Club - Wynn Las Vegas"}]}
+{"start": "2025-08-16T05:30:00Z", "phq_attendance": 3582, "title": "Sofi Tukker", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-06T05:30:00Z", "phq_attendance": 3564, "title": "Diplo", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-18T05:30:00Z", "phq_attendance": 3556, "title": "Diplo", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-10T05:30:00Z", "phq_attendance": 3866, "title": "Marshmello", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-23T05:30:00Z", "phq_attendance": 3655, "title": "Diplo", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-21T01:30:00Z", "phq_attendance": 80000, "title": "SuperMotocross World Championship - Final", "entities": [{"name": "Las Vegas Motor Speedway"}]}
+{"start": "2025-09-16T07:00:00Z", "phq_attendance": 20000, "title": "Las Vegas Souvenir & Resort Gift Show 2025", "entities": []}
+{"start": "2025-09-28T16:00:00Z", "phq_attendance": 10000, "title": "Western Roofing Expo", "entities": [{"name": "Paris Las Vegas"}]}
+{"start": "2025-08-11T03:00:00Z", "phq_attendance": 13254, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-04T14:00:00Z", "phq_attendance": 3500, "title": "Tri-State Seminar", "entities": [{"name": "South Point Hotel, Casino & Spa"}]}
+{"start": "2025-07-27T16:00:00Z", "phq_attendance": 10000, "title": "RetailNow", "entities": [{"name": "Caesars Palace"}]}
+{"start": "2025-09-05T16:00:00Z", "phq_attendance": 20000, "title": "High Roller Reining Classic", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-10-06T02:30:00Z", "phq_attendance": 11564, "title": "Hozier with Amble", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-11T15:00:00Z", "phq_attendance": 8000, "title": "Ai4 Conference", "entities": [{"name": "MGM Grand"}]}
+{"start": "2025-09-29T16:00:00Z", "phq_attendance": 20000, "title": "IBWA Annual Business Conference & Trade Show", "entities": [{"name": "Westgate Las Vegas Resort & Casino"}]}
+{"start": "2025-09-17T16:00:00Z", "phq_attendance": 10000, "title": "NATP Tax Forums & Expo", "entities": [{"name": "Paris Las Vegas"}]}
+{"start": "2025-10-07T16:00:00Z", "phq_attendance": 10000, "title": "Great American Business Show", "entities": [{"name": "The Copa Room - Tuscany Suites & Casino"}]}
+{"start": "2025-09-18T16:00:00Z", "phq_attendance": 10000, "title": "Drive Expo", "entities": [{"name": "Westgate Las Vegas Resort & Casino"}]}
+{"start": "2025-09-29T16:00:00Z", "phq_attendance": 10000, "title": "ADISA Conference and Trade Show", "entities": [{"name": "Cosmopolitan of Las Vegas"}]}
+{"start": "2025-10-15T07:00:00Z", "phq_attendance": 5000, "title": "B2B Marketing Expo US", "entities": []}
+{"start": "2025-10-15T16:00:00Z", "phq_attendance": 8000, "title": "Business Show", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-09-28T16:00:00Z", "phq_attendance": 20000, "title": "NRHSA Convention & Table Top Expo", "entities": [{"name": "The Orleans Hotel & Casino"}]}
+{"start": "2025-07-26T03:00:00Z", "phq_attendance": 3715, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-07-27T03:00:00Z", "phq_attendance": 3735, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-02T03:00:00Z", "phq_attendance": 3760, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-09T03:00:00Z", "phq_attendance": 3715, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-10T03:00:00Z", "phq_attendance": 3738, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-16T03:00:00Z", "phq_attendance": 3727, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-08-17T03:00:00Z", "phq_attendance": 3760, "title": "Kelly Clarkson", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-10-16T16:00:00Z", "phq_attendance": 5000, "title": "IAPA Conference", "entities": []}
+{"start": "2025-10-17T00:00:00Z", "phq_attendance": 20000, "title": "Haunted Harvest", "entities": [{"name": "Springs Preserve"}]}
+{"start": "2025-10-15T16:00:00Z", "phq_attendance": 5000, "title": "Going Global Live", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-08-15T23:00:00Z", "phq_attendance": 4600, "title": "Run for a Million Cow Horse Challenge", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-08-17T01:00:00Z", "phq_attendance": 4600, "title": "Run for a Million Reining Championship", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-08-15T02:00:00Z", "phq_attendance": 4600, "title": "Run for a Million Cutting Horse Challenge", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-10-21T16:00:00Z", "phq_attendance": 10000, "title": "Naspp Conference & Exhibition", "entities": [{"name": "Virgin Hotels Las Vegas, Curio Collection by Hilton"}]}
+{"start": "2025-09-24T16:00:00Z", "phq_attendance": 10000, "title": "American International Motorcycle Expo", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-09-27T16:00:00Z", "phq_attendance": 10000, "title": "Appraisal Summit and Expo", "entities": [{"name": "Planet Hollywood Resort & Casino"}]}
+{"start": "2025-09-27T16:00:00Z", "phq_attendance": 5000, "title": "Las Vegas Barber Expo", "entities": [{"name": "Westgate Las Vegas Resort & Casino"}]}
+{"start": "2025-09-16T02:00:00Z", "phq_attendance": 60662, "title": "Los Angeles Chargers vs Las Vegas Raiders", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-10-12T20:05:00Z", "phq_attendance": 57369, "title": "Tennessee Titans vs Las Vegas Raiders", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-09-28T20:25:00Z", "phq_attendance": 57819, "title": "Chicago Bears vs Las Vegas Raiders", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-09-28T02:05:00Z", "phq_attendance": 5290, "title": "Triple-A National Championship Game", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-07-26T03:00:00Z", "phq_attendance": 13412, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-07-27T03:00:00Z", "phq_attendance": 13412, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-07-28T03:00:00Z", "phq_attendance": 13359, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-11T02:00:00Z", "phq_attendance": 3810, "title": "Rick Springfield with Wang Chung, John Waite, and Paul Young", "entities": [{"name": "Lee Family Forum"}]}
+{"start": "2025-08-02T03:00:00Z", "phq_attendance": 13332, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-03T03:00:00Z", "phq_attendance": 13332, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-04T03:00:00Z", "phq_attendance": 13292, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-10-03T07:00:00Z", "phq_attendance": 12000, "title": "Slightly Stoopid, Dirty Heads, Public Enemy, and 8 others", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-10-04T07:00:00Z", "phq_attendance": 12000, "title": "Reggae Rise Up (NV) at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-08-10T02:30:00Z", "phq_attendance": 3446, "title": "Counting Crows with The Gaslight Anthem", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-09-20T05:30:00Z", "phq_attendance": 4000, "title": "Mau P", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-02T05:30:00Z", "phq_attendance": 4000, "title": "Mau P", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-13T05:30:00Z", "phq_attendance": 3766, "title": "Marshmello", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-21T05:30:00Z", "phq_attendance": 3860, "title": "Marshmello", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-24T05:30:00Z", "phq_attendance": 3953, "title": "Marshmello", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-09T03:00:00Z", "phq_attendance": 13373, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-10T03:00:00Z", "phq_attendance": 13367, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-02T03:00:00Z", "phq_attendance": 4450, "title": "El Flaco / El Mimoso at The Theater at Virgin Hotels Las Vegas", "entities": [{"name": "The Theater at Virgin Hotels Las Vegas"}]}
+{"start": "2025-09-07T00:00:00Z", "phq_attendance": 58571, "title": "UCLA Bruins vs UNLV Rebels", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-10-11T19:30:00Z", "phq_attendance": 39177, "title": "Air Force Falcons vs UNLV Rebels", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-09-15T03:00:00Z", "phq_attendance": 7041, "title": "Palomazo Norteno with Lalo Mora, Eliseo Robles, Rosendo Cantu, and Raul Hernandez", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-09-21T05:30:00Z", "phq_attendance": 3436, "title": "Timmy Trumpet", "entities": [{"name": "Cosmopolitan of Las Vegas - Marquee Nightclub & Dayclub"}]}
+{"start": "2025-10-10T16:00:00Z", "phq_attendance": 5845, "title": "AcroLove Festival - Vegas", "entities": []}
+{"start": "2025-08-30T02:00:00Z", "phq_attendance": 9449, "title": "Pantera with Amon Amarth", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-16T03:00:00Z", "phq_attendance": 13193, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-17T03:00:00Z", "phq_attendance": 13208, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-18T03:00:00Z", "phq_attendance": 13009, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-10-19T18:00:00Z", "phq_attendance": 85000, "title": "When We Were Young Fest at Las Vegas Festival Grounds", "entities": [{"name": "Las Vegas Festival Grounds"}]}
+{"start": "2025-08-21T07:00:00Z", "phq_attendance": 3708, "title": "Jerrod Niemann, Dean Dillon, and Lance Miller", "entities": [{"name": "Mandalay Bay"}]}
+{"start": "2025-10-16T03:00:00Z", "phq_attendance": 4271, "title": "Alanis Morissette", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-10-19T03:00:00Z", "phq_attendance": 4563, "title": "Alanis Morissette", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 8694, "title": "Carin Leon", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-07-25T17:00:00Z", "phq_attendance": 10000, "title": "The Vegas National Show - Rare Coin and Currency Events by CK Shows", "entities": [{"name": "The Copa Room - Tuscany Suites & Casino"}]}
+{"start": "2025-10-10T07:00:00Z", "phq_attendance": 12000, "title": "Jimmy Eat World, Minus the Bear, Tigers Jaw, and 35 others", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-10-05T07:00:00Z", "phq_attendance": 12000, "title": "Reggae Rise Up (NV) at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-09-02T03:00:00Z", "phq_attendance": 4123, "title": "Alanis Morissette", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 6481, "title": "Banda MS", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-07-26T18:00:00Z", "phq_attendance": 3848, "title": "Marshmello at XS Nightclub", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-02T07:00:00Z", "phq_attendance": 4539, "title": "Mount Charleston Craft Show", "entities": []}
+{"start": "2025-07-26T02:00:00Z", "phq_attendance": 65000, "title": "Beyonce", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-09-25T02:30:00Z", "phq_attendance": 3783, "title": "Rod Stewart", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-27T02:30:00Z", "phq_attendance": 3784, "title": "Rod Stewart", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-10-02T02:30:00Z", "phq_attendance": 3783, "title": "Rod Stewart", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-10-04T02:30:00Z", "phq_attendance": 3783, "title": "Rod Stewart", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-15T02:30:00Z", "phq_attendance": 9500, "title": "Hot Wheels Monster Trucks Live Glow-N-Fire", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-09-14T19:30:00Z", "phq_attendance": 9500, "title": "Hot Wheels Monster Trucks Live Glow-N-Fire", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-09-14T02:30:00Z", "phq_attendance": 9500, "title": "Hot Wheels Monster Trucks Live Glow-N-Fire", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-09-13T19:30:00Z", "phq_attendance": 9500, "title": "Hot Wheels Monster Trucks Live Glow-N-Fire", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-09-13T03:30:00Z", "phq_attendance": 12589, "title": "Eagles", "entities": [{"name": "Sphere"}]}
+{"start": "2025-07-27T02:00:00Z", "phq_attendance": 65000, "title": "Beyonce", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-09-14T03:00:00Z", "phq_attendance": 7319, "title": "Jorge Medina y Josi Cuen - JUNTOS with Jorge Medina", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-07-28T05:30:00Z", "phq_attendance": 3588, "title": "Bob Moses (Club Set)", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-03T05:30:00Z", "phq_attendance": 4013, "title": "The Chainsmokers", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-25T05:30:00Z", "phq_attendance": 3362, "title": "Bob Moses (Club Set)", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-31T05:30:00Z", "phq_attendance": 4049, "title": "The Chainsmokers", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-01T05:30:00Z", "phq_attendance": 3356, "title": "Deadmau5", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-07T05:30:00Z", "phq_attendance": 3360, "title": "Deadmau5", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-14T05:30:00Z", "phq_attendance": 3957, "title": "The Chainsmokers", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-09-28T05:30:00Z", "phq_attendance": 4026, "title": "The Chainsmokers", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-10-03T19:00:00Z", "phq_attendance": 4504, "title": "Henderson Hot Rod Days Car Show", "entities": []}
+{"start": "2025-09-20T01:30:00Z", "phq_attendance": 13809, "title": "Bryan Adams, Feid, Lil Wayne, and 5 others", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-10T07:00:00Z", "phq_attendance": 12000, "title": "Best Friends Forever at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-10-11T07:00:00Z", "phq_attendance": 12000, "title": "Best Friends Forever at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-10-12T07:00:00Z", "phq_attendance": 12000, "title": "Best Friends Forever at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-08-30T06:15:00Z", "phq_attendance": 14125, "title": "Insomniac x Tomorrowland: UNITY", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-03T16:00:00Z", "phq_attendance": 20000, "title": "SourceDirect at ASD", "entities": [{"name": "South Halls - Las Vegas Convention Center"}]}
+{"start": "2025-08-17T16:00:00Z", "phq_attendance": 20000, "title": "Womenswear in Nevada", "entities": [{"name": "World Market Center Las Vegas"}]}
+{"start": "2025-09-18T16:00:00Z", "phq_attendance": 10000, "title": "Western International Optical Exhibition", "entities": [{"name": "The Venetian Resort"}]}
+{"start": "2025-10-02T16:00:00Z", "phq_attendance": 20000, "title": "Las Vegas Open", "entities": [{"name": "Horseshoe Las Vegas"}]}
+{"start": "2025-07-22T14:00:00Z", "phq_attendance": 3500, "title": "Superstar Retreat", "entities": [{"name": "The Venetian Resort"}]}
+{"start": "2025-09-20T02:00:00Z", "phq_attendance": 31643, "title": "Chris Brown with Summer Walker and Bryson Tiller", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-08-23T01:30:00Z", "phq_attendance": 8980, "title": "$uicideboy$ with Night Lovell, Germ, and Joeyy", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-30T02:00:00Z", "phq_attendance": 3913, "title": "Kayzo at Downtown Las Vegas Events Center", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-08-02T20:00:00Z", "phq_attendance": 19522, "title": "Monster Jam", "entities": [{"name": "Thomas & Mack Center"}]}
+{"start": "2025-08-03T20:00:00Z", "phq_attendance": 19522, "title": "Monster Jam", "entities": [{"name": "Thomas & Mack Center"}]}
+{"start": "2025-10-04T03:30:00Z", "phq_attendance": 12599, "title": "Eagles", "entities": [{"name": "Sphere"}]}
+{"start": "2025-09-05T07:00:00Z", "phq_attendance": 6000, "title": "Fall Craft Spectacular", "entities": []}
+{"start": "2025-08-03T07:00:00Z", "phq_attendance": 41000, "title": "ASD Las Vegas", "entities": []}
+{"start": "2025-10-12T02:00:00Z", "phq_attendance": 11916, "title": "Stevie Nicks", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-09-13T04:00:00Z", "phq_attendance": 4174, "title": "Pitbull", "entities": [{"name": "BleauLive Theater"}]}
+{"start": "2025-09-14T04:00:00Z", "phq_attendance": 4216, "title": "Pitbull", "entities": [{"name": "BleauLive Theater"}]}
+{"start": "2025-09-14T03:00:00Z", "phq_attendance": 3791, "title": "Chelo with Juan Valentin", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-10-19T03:00:00Z", "phq_attendance": 4867, "title": "The Wanted", "entities": [{"name": "M Resort Spa Casino"}]}
+{"start": "2025-08-19T18:00:00Z", "phq_attendance": 4093, "title": "Marshmello at XS Nightclub", "entities": [{"name": "XS Nightclub - Wynn Las Vegas"}]}
+{"start": "2025-08-24T04:00:00Z", "phq_attendance": 5846, "title": "Bruno Mars", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-27T22:00:00Z", "phq_attendance": 5136, "title": "Thee Sacred Souls with Ravyn Lenae", "entities": [{"name": "Downtown Las Vegas Events Center"}]}
+{"start": "2025-09-28T02:00:00Z", "phq_attendance": 9500, "title": "Arena Wars Fighting Series #124", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-10-10T07:00:00Z", "phq_attendance": 40000, "title": "Age of Chivalry Rennaissance Faire", "entities": []}
+{"start": "2025-09-27T03:00:00Z", "phq_attendance": 7542, "title": "Benson Boone", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-23T03:00:00Z", "phq_attendance": 13080, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-24T03:00:00Z", "phq_attendance": 13055, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-08-25T03:00:00Z", "phq_attendance": 13055, "title": "Backstreet Boys", "entities": [{"name": "Sphere"}]}
+{"start": "2025-09-29T02:30:00Z", "phq_attendance": 10028, "title": "The Who", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-10-18T02:00:00Z", "phq_attendance": 6860, "title": "Lorde with The Japanese House and Blood Orange", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-09-10T01:30:00Z", "phq_attendance": 20000, "title": "The Bronx Wanderers", "entities": [{"name": "South Point Hotel Casino"}]}
+{"start": "2025-08-13T16:00:00Z", "phq_attendance": 3691, "title": "2025 Vegas to Reno", "entities": []}
+{"start": "2025-09-16T03:00:00Z", "phq_attendance": 4074, "title": "Jesse & Joy", "entities": [{"name": "The Theater at Virgin Hotels"}]}
+{"start": "2025-09-28T03:00:00Z", "phq_attendance": 8946, "title": "Jeff Chang", "entities": [{"name": "MGM Grand Garden Arena"}]}
+{"start": "2025-09-13T23:00:00Z", "phq_attendance": 65000, "title": "TKO Boxing: Canelo vs Crawford", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-08-16T20:00:00Z", "phq_attendance": 47224, "title": "San Francisco 49ers vs Las Vegas Raiders", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-10-04T03:00:00Z", "phq_attendance": 8287, "title": "Ehrlich Brothers at Orleans Arena", "entities": [{"name": "The Orleans Hotel & Casino - Orleans Arena"}]}
+{"start": "2025-09-09T16:00:00Z", "phq_attendance": 10000, "title": "TechXNow | Premier Tech Conference in Las Vegas", "entities": [{"name": "Bellagio Hotel and Casino"}]}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 4378, "title": "Ricky Martin", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 4450, "title": "Grupo Duelo at The Theater at Virgin Hotels Las Vegas", "entities": [{"name": "The Theater at Virgin Hotels Las Vegas"}]}
+{"start": "2025-09-14T03:30:00Z", "phq_attendance": 4444, "title": "Janet Jackson", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-09-15T03:30:00Z", "phq_attendance": 4348, "title": "Janet Jackson", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-09-18T03:30:00Z", "phq_attendance": 4344, "title": "Janet Jackson", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-09-21T03:30:00Z", "phq_attendance": 4339, "title": "Janet Jackson", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-08-16T01:30:00Z", "phq_attendance": 5356, "title": "Sublime at Dolby Live at Park MGM Las Vegas", "entities": [{"name": "Eataly Las Vegas at Park MGM"}]}
+{"start": "2025-08-23T02:00:00Z", "phq_attendance": 3679, "title": "Upchurch", "entities": [{"name": "Lee Family Forum"}]}
+{"start": "2025-08-16T01:30:00Z", "phq_attendance": 4385, "title": "Pennywise", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-17T01:30:00Z", "phq_attendance": 4360, "title": "Pennywise", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-08-17T01:30:00Z", "phq_attendance": 5234, "title": "Sublime at Dolby Live at Park MGM Las Vegas", "entities": [{"name": "Eataly Las Vegas at Park MGM"}]}
+{"start": "2025-10-16T02:00:00Z", "phq_attendance": 18000, "title": "NBA - Pre Season - Dallas Mavericks vs Los Angeles Lakers", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-18T16:00:00Z", "phq_attendance": 5000, "title": "Aging Wellness Expo Fall 2025", "entities": [{"name": "Rio Convention Center"}]}
+{"start": "2025-09-15T03:00:00Z", "phq_attendance": 4397, "title": "Marco Antonio Solis", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-16T03:00:00Z", "phq_attendance": 4535, "title": "Marco Antonio Solis", "entities": [{"name": "The Colosseum at Caesars Palace"}]}
+{"start": "2025-09-21T02:30:00Z", "phq_attendance": 7613, "title": "LE SSERAFIM", "entities": [{"name": "Michelob ULTRA Arena"}]}
+{"start": "2025-08-30T01:30:00Z", "phq_attendance": 3582, "title": "Haarper with Shakewell", "entities": [{"name": "Area 15"}]}
+{"start": "2025-08-24T20:00:00Z", "phq_attendance": 5106, "title": "The 2025 ED EXPO", "entities": []}
+{"start": "2025-09-01T02:00:00Z", "phq_attendance": 10741, "title": "G-Dragon", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-05T03:30:00Z", "phq_attendance": 3815, "title": "Thomas Rhett", "entities": [{"name": "BleauLive Theater"}]}
+{"start": "2025-10-04T03:30:00Z", "phq_attendance": 3586, "title": "Thomas Rhett", "entities": [{"name": "BleauLive Theater"}]}
+{"start": "2025-09-20T03:00:00Z", "phq_attendance": 4451, "title": "Juanes", "entities": [{"name": "M Resort Spa Casino"}]}
+{"start": "2025-08-22T18:00:00Z", "phq_attendance": 4000, "title": "Breakaway Takeover at Wynn Las Vegas 2025", "entities": [{"name": "Encore Beach Club - Wynn Las Vegas"}]}
+{"start": "2025-09-24T02:05:00Z", "phq_attendance": 6231, "title": "2025 PCL Playoff Game 1", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-26T02:05:00Z", "phq_attendance": 6231, "title": "2025 PCL Playoff Game 3", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-09-25T02:05:00Z", "phq_attendance": 6231, "title": "2025 PCL Playoff Game 2", "entities": [{"name": "Las Vegas Ballpark"}]}
+{"start": "2025-10-02T01:00:00Z", "phq_attendance": 16369, "title": "NHL - Pre Season - Colorado Avalanche vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-09-26T02:00:00Z", "phq_attendance": 16687, "title": "NHL - Pre Season - Utah Hockey Club vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-04T02:00:00Z", "phq_attendance": 17089, "title": "Preseason: San Jose Sharks vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-09-24T02:00:00Z", "phq_attendance": 16961, "title": "NHL - Pre Season - Los Angeles Kings vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-08-14T07:00:00Z", "phq_attendance": 5200, "title": "Sublime, Pennywise, The Ataris, and 4 others", "entities": [{"name": "Dolby Live"}]}
+{"start": "2025-09-18T16:30:00Z", "phq_attendance": 4538, "title": "OGI EYEWEAR AT VISION EXPO WEST 2025", "entities": []}
+{"start": "2025-07-22T16:00:00Z", "phq_attendance": 20000, "title": "The Righteous Brothers: Bill Medley and Bucky Heard", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-07-25T16:00:00Z", "phq_attendance": 20000, "title": "Human Nature Back to the Sound of Motown", "entities": [{"name": "South Point Hotel, Casino & Spa - South Point Arena"}]}
+{"start": "2025-09-05T16:00:00Z", "phq_attendance": 10000, "title": "Home Improvement & Backyard Expo", "entities": [{"name": "World Market Center Las Vegas"}]}
+{"start": "2025-08-17T16:00:00Z", "phq_attendance": 10000, "title": "Offprice Show", "entities": [{"name": "The Venetian Resort"}]}
+{"start": "2025-09-08T16:00:00Z", "phq_attendance": 20000, "title": "RE+ Expo - Energy Export", "entities": []}
+{"start": "2025-08-30T16:00:00Z", "phq_attendance": 10000, "title": "John Summit Concert in Las Vegas", "entities": [{"name": "Fontainebleau"}]}
+{"start": "2025-08-16T18:00:00Z", "phq_attendance": 10000, "title": "Front Row Card Show", "entities": [{"name": "Rio All-Suites Hotel and Casino"}]}
+{"start": "2025-09-19T16:00:00Z", "phq_attendance": 20000, "title": "PDR Expo", "entities": [{"name": "Las Vegas Club Hotel & Casino"}]}
+{"start": "2025-10-10T16:00:00Z", "phq_attendance": 20000, "title": "Construction, Real Estate & Friends", "entities": [{"name": "Vegas Chamber"}]}
+{"start": "2025-09-13T16:00:00Z", "phq_attendance": 20000, "title": "Cigars, Coffee & Chocolate", "entities": [{"name": "Ahern Hotel and Convention Center"}]}
+{"start": "2025-08-11T16:00:00Z", "phq_attendance": 5000, "title": "WWIN Summer", "entities": [{"name": "World Market Center Las Vegas"}]}
+{"start": "2025-08-19T16:00:00Z", "phq_attendance": 5000, "title": "Us Foods", "entities": [{"name": "Mandalay Bay Beach"}]}
+{"start": "2025-10-20T16:00:00Z", "phq_attendance": 12000, "title": "International Watch & Jewelry Guild Show", "entities": [{"name": "Harrah's Las Vegas Hotel & Casino"}]}
+{"start": "2025-10-14T16:00:00Z", "phq_attendance": 10000, "title": "Big Industry Show", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-08-01T16:00:00Z", "phq_attendance": 20000, "title": "EVO USA", "entities": [{"name": "Las Vegas Convention Center"}]}
+{"start": "2025-09-30T16:00:00Z", "phq_attendance": 20000, "title": "NAC Conference & Expo", "entities": [{"name": "Caesars Palace"}]}
+{"start": "2025-09-13T03:00:00Z", "phq_attendance": 4084, "title": "Duelo", "entities": [{"name": "Bakkt Theater at Planet Hollywood"}]}
+{"start": "2025-10-11T02:00:00Z", "phq_attendance": 3921, "title": "AHL - Abbotsford Canucks vs Henderson Silver Knights", "entities": [{"name": "Dollar Loan Center"}]}
+{"start": "2025-10-05T03:00:00Z", "phq_attendance": 65000, "title": "Paul McCartney", "entities": [{"name": "Allegiant Stadium"}]}
+{"start": "2025-10-12T01:00:00Z", "phq_attendance": 3401, "title": "AHL - Abbotsford Canucks vs Henderson Silver Knights", "entities": [{"name": "Dollar Loan Center"}]}
+{"start": "2025-10-09T07:00:00Z", "phq_attendance": 9358, "title": "2025 Olympia", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-10-11T01:00:00Z", "phq_attendance": 5000, "title": "Joe Weider's Olympia", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-10-12T02:00:00Z", "phq_attendance": 5000, "title": "Joe Weider's Olympia", "entities": [{"name": "Resorts World Las Vegas"}]}
+{"start": "2025-10-21T02:00:00Z", "phq_attendance": 17117, "title": "Carolina Hurricanes vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-17T02:00:00Z", "phq_attendance": 17240, "title": "Boston Bruins vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-09T02:00:00Z", "phq_attendance": 18000, "title": "Los Angeles Kings vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-10-19T02:00:00Z", "phq_attendance": 17430, "title": "Calgary Flames vs Vegas Golden Knights", "entities": [{"name": "T-Mobile Arena"}]}
+{"start": "2025-09-10T06:00:00Z", "phq_attendance": 9707, "title": "DJ Snake", "entities": [{"name": "Sphere"}]}
+{"start": "2025-09-05T17:00:00Z", "phq_attendance": 8867, "title": "Las Vegas Home Shows", "entities": []}

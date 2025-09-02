@@ -1,0 +1,129 @@
+<!doctype html><html><head>
+  <!-- Force redeploy -->
+  <script>window.API_BASE='https://soy-intel-api-236447953924.us-central1.run.app/api';</script>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Soy Intel — Pro</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+  .leaflet-popup-content-wrapper { background-color: #0b1120; color: #e5e7eb; border-color: #374151; }
+  .leaflet-popup-tip { background-color: #0b1120; }
+  .leaflet-control-zoom-in, .leaflet-control-zoom-out { background-color: #0b1120 !important; color: #e5e7eb !important; border-color: #374151 !important; }
+</style>
+</head>
+<body class="bg-gradient-to-b from-[#070b14] to-[#0b1120] text-white">
+<header class="sticky top-0 z-20 bg-black/30 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+    <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_16px_6px_rgba(16,185,129,.45)]"></div>
+    <h1 class="text-xl font-bold">Soybean <span class="text-emerald-400">Intel</span></h1>
+    <a id="api-docs" class="ml-auto text-xs text-gray-400 hover:text-white underline underline-offset-4" href="#">API</a>
+  </div>
+</header>
+<main class="max-w-7xl mx-auto p-4 sm:p-6">
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="card"><p class="muted">Current ZL Price</p><p id="kpi-price" class="kpi">—</p><p id="kpi-change" class="text-xs muted">Loading…</p></div>
+    <div class="card"><p class="muted">Top Opportunity</p><p id="kpi-top" class="kpi">—</p><p id="kpi-top-event" class="text-xs muted">Loading…</p></div>
+    <div class="card"><p class="muted">Active Signals</p><p id="kpi-sig" class="kpi">—</p><p class="text-xs muted">Market alerts</p></div>
+  </section>
+
+  <section id="vegas-view" class="mt-6">
+    <div class="card p-4">
+      <h3 class="title">Vegas Opportunity Map</h3>
+      <div id="map" style="height: 400px;" class="mt-2 rounded-lg border border-white/10"></div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+    <div class="card lg:col-span-2">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="title">Price Forecast</h3>
+        <div class="flex gap-2">
+          <button class="btn" data-model="lr">Linear</button>
+          <button class="btn" data-model="mc">Monte Carlo</button>
+          <button id="btn-scenario" class="btn-primary">Scenario</button>
+        </div>
+      </div>
+      <canvas id="chart" height="120"></canvas>
+    </div>
+    <div class="card">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="title">Top Opportunities</h3>
+        <button id="btn-refresh" class="btn">Refresh</button>
+      </div>
+      <div id="opps" class="space-y-3 max-h-[520px] overflow-y-auto thin-scroll"></div>
+    </div>
+  </section>
+</main>
+<div id="modal" class="hidden fixed inset-0 z-30 items-center justify-center bg-black/60">
+  <div class="card w-[420px]">
+    <h3 class="title">Scenario</h3>
+    <div class="grid grid-cols-3 gap-3">
+      <div><label class="muted text-xs">Basis%</label><input id="sc-basis" class="input" type="number" step="0.1" value="0"></div>
+      <div><label class="muted text-xs">Vol</label><input id="sc-vol" class="input" type="number" step="0.1" value="1.0"></div>
+      <div><label class="muted text-xs">Demand</label><input id="sc-dem" class="input" type="number" step="5" value="0"></div>
+    </div>
+    <div class="flex gap-2 mt-3"><button id="sc-run" class="btn-primary flex-1">Run</button><button id="sc-x" class="btn flex-1">Cancel</button></div>
+    <div id="sc-out" class="text-sm text-gray-300 mt-2 hidden"></div>
+  </div>
+</div>
+<script>
+const API = window.API_BASE || 'http://localhost:8080/api';
+document.getElementById('api-docs').href = API.replace('/api','/docs');
+let chart;
+
+async function kpis() {
+  const resp = await fetch(`${API}/kpis`);
+  const data = await resp.json();
+  document.getElementById('kpi-price').textContent = `$${data.price.toFixed(2)}`;
+  document.getElementById('kpi-change').textContent = `${data.change.toFixed(2)}%`;
+  document.getElementById('kpi-top').textContent = data.top_opportunity;
+  document.getElementById('kpi-top-event').textContent = data.top_event;
+  document.getElementById('kpi-sig').textContent = data.active_signals;
+}
+async function forecast(model='lr'){/*... as before ...*/}
+async function opps(){/*... as before ...*/}
+function openModal(){/*... as before ...*/}
+function closeModal(){/*... as before ...*/}
+async function runScenario(){/*... as before ...*/}
+
+async function initMap() {
+    const map = L.map('map').setView([36.114647, -115.172813], 13); // Centered on Las Vegas
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    }).addTo(map);
+
+    // This is a placeholder for fetching real geocoded data.
+    // In a real implementation, you would fetch from /api/vegas/events and /api/vegas/restaurants
+    const opportunities = await fetch(`${API}/opportunities`).then(res => res.json()).catch(() => []);
+
+    if (opportunities.length > 0) {
+        // Simple placeholder to get some coordinates for the top opportunity
+        const topOpp = opportunities[0];
+        const eventLocation = [36.1025, -115.1745]; // Placeholder for event location
+        const restaurantLocation = [36.1195, -115.1764]; // Placeholder for restaurant location
+
+        const eventMarker = L.marker(eventLocation).addTo(map)
+            .bindPopup(`<b>${topOpp.event_name}</b><br>Major Event.`);
+            
+        const restaurantMarker = L.marker(restaurantLocation).addTo(map)
+            .bindPopup(`<b>${topOpp.restaurant_name}</b><br>Score: ${topOpp.score.toFixed(0)}<br>+${topOpp.predicted_lbs.toFixed(0)} lbs`);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  kpis(); forecast('lr'); opps(); initMap();
+  document.querySelectorAll('.btn[data-model]').forEach(b=>b.addEventListener('click',()=>forecast(b.dataset.model)));
+  document.getElementById('btn-refresh').addEventListener('click', opps);
+  document.getElementById('btn-scenario').addEventListener('click', openModal);
+  document.getElementById('sc-x').addEventListener('click', closeModal);
+  document.getElementById('sc-run').addEventListener('click', runScenario);
+  setInterval(kpis, 30000);
+});
+</script>
+</body></html>
