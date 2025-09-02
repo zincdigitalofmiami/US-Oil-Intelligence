@@ -79,3 +79,7 @@ substitutions:
   _SERVICE_NAME: soy-intel-svc
   _REGION: us-central1
   _REPO_NAME: soy-intel-repository
+
+# Explicitly set the logging option to resolve the service account permissions error.
+options:
+  logging: CLOUD_LOGGING_ONLY
