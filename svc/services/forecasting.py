@@ -54,3 +54,4 @@ class Forecaster:
         for i in range(len(mid)): adj["p10"][i]=mid[i]-width[i]*vol_scale; adj["p90"][i]=mid[i]+width[i]*vol_scale
         for k in adj: adj[k]=[v*(1+demand/1000.0) for v in adj[k]]
         return adj
+# Triggering CI/CD pipeline
