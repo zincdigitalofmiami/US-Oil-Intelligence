@@ -1,39 +1,20 @@
+# This is a streamlined cloudbuild.yaml that leverages a multi-stage Dockerfile.
+# The Dockerfile now handles all dependency installation, linting, and testing.
+
 steps:
-# 1. Install dependencies for linting and testing
-- name: 'python:3.11-slim'
-  entrypoint: 'pip'
-  args: ['install', '-r', 'requirements.txt', 'flake8', 'pytest']
-  id: 'Install Deps'
-
-# 2. Run Linter (Flake8)
-# This step will fail the build if linting errors are found.
-- name: 'python:3.11-slim'
-  entrypoint: 'flake8'
-  args: ['./svc']
-  id: 'Lint'
-  waitFor: ['Install Deps']
-
-# 3. Run Unit Tests (Pytest)
-# This step will fail the build if tests fail. Assumes tests are in ./svc/tests
-- name: 'python:3.11-slim'
-  entrypoint: 'pytest'
-  args: ['./svc/tests']
-  id: 'Test'
-  waitFor: ['Install Deps']
-
-# 4. Build the container image (only if linting and tests pass)
+# 1. Build the container image using the multi-stage Dockerfile.
+# The 'builder' stage will run linting and tests. If they fail, this step fails.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_SERVICE_NAME}:$COMMIT_SHA', '.']
   id: 'Build'
-  waitFor: ['Lint', 'Test']
 
-# 5. Push the container image to Artifact Registry
+# 2. Push the final container image to Artifact Registry.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_SERVICE_NAME}:$COMMIT_SHA']
   id: 'Push'
   waitFor: ['Build']
 
-# 6. Deploy container image to Cloud Run
+# 3. Deploy the container image to Cloud Run.
 - name: 'gcr.io/google-appengine/exec-wrapper'
   args:
   - '-i'
@@ -50,12 +31,12 @@ steps:
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
-  # Example for securely injecting secrets:
-  # '--update-secrets=MY_API_KEY=my-api-key-secret:latest'
+  - '--service-account' # Added service account flag
+  - 'firebase-ci-cd-sa@soy-comm-2024.iam.gserviceaccount.com' # Your service account email
   id: 'Deploy Backend'
   waitFor: ['Push']
 
-# 7. Deploy to Firebase Hosting
+# 4. Deploy to Firebase Hosting.
 - name: 'gcr.io/cloud-builders/npm'
   entrypoint: 'bash'
   args:
@@ -64,22 +45,22 @@ steps:
   secretEnv: ['FIREBASE_TOKEN']
   id: 'Deploy Frontend'
 
+# List of images to be built and pushed.
 images:
 - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_SERVICE_NAME}:$COMMIT_SHA'
 
-# This configuration uses Secret Manager for the Firebase token.
-# See setup instructions in the Cloud Build documentation.
+# Use Secret Manager for the Firebase token.
 availableSecrets:
   secretManager:
   - versionName: projects/$PROJECT_ID/secrets/firebase-ci-token/versions/latest
     env: 'FIREBASE_TOKEN'
+
+# Explicitly set the logging option to resolve the service account permissions error.
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 # Default values for substitutions. Can be overridden in your trigger.
 substitutions:
   _SERVICE_NAME: soy-intel-svc
   _REGION: us-central1
   _REPO_NAME: soy-intel-repository
-
-# Explicitly set the logging option to resolve the service account permissions error.
-options:
-  logging: CLOUD_LOGGING_ONLY
