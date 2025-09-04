@@ -6,15 +6,11 @@ import json
 import requests
 import pandas as pd
 from ..core.config import settings
+from ..core.secrets import secrets_client # Import the new secrets client
 
 def _get_nass_api_key() -> str | None:
-    """Reads the usda-api-key from the secrets file."""
-    secrets_path = os.path.join(settings.data_dir, "secrets.json")
-    if not os.path.exists(secrets_path):
-        return None
-    with open(secrets_path, 'r') as f:
-        secrets = json.load(f)
-        return secrets.get("usda-api-key")
+    """Reads the usda-api-key from Secret Manager."""
+    return secrets_client.get_secret("usda-api-key")
 
 def get_nass_data() -> dict | None:
     """
@@ -29,7 +25,7 @@ def get_nass_data() -> dict | None:
     api_key = _get_nass_api_key()
     if not api_key:
         print("NASS API key not found. Skipping data fetch.")
-        return {"warning": "NASS API key not found in data/secrets.json"}
+        return {"warning": "NASS API key not found in Secret Manager"}
 
     # Example parameters for fetching US Soybean Planting Progress for the current year
     # These can be customized to get different data.

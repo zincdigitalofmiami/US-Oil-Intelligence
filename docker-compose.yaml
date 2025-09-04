@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  api-core:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - GCP_PROJECT=test-project
+      - SECRET_MANAGER_EMULATOR_HOST=gcloud-secret-manager-emulator:8083
+      - DATA_DIR=/app/data
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - gcloud-secret-manager-emulator
+
+  secrets-populator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python populate_secrets.py
+    environment:
+      - GCP_PROJECT=test-project
+      - SECRET_MANAGER_EMULATOR_HOST=gcloud-secret-manager-emulator:8083
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - gcloud-secret-manager-emulator
+
+  gcloud-secret-manager-emulator:
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli:emulators
+    ports:
+      - "8083:8083"
+    command: gcloud beta emulators secretmanager start --host-port=0.0.0.0:8083 --project=test-project

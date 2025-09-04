@@ -30,7 +30,7 @@ typing-inspection==0.4.1
 typing_extensions==4.15.0
 tzdata==2025.2
 uvicorn==0.35.0
-flake8
-pytest
+flake8==7.1.0
+pytest==8.2.2
 prophet==1.1.5
-holidays
+holidays==0.54
